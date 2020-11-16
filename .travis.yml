@@ -24,13 +24,13 @@ script: coverage run --source=pygac setup.py test
 before_install:
 - if [[ "$TRAVIS_CPU_ARCH" == "ppc64le" ]]; then 
       sudo apt-get update ;
-      sudo apt-get add --upgrade --no-cache \
+      sudo apt-get install --upgrade --no-cache \
               bash openssh curl ca-certificates openssl less htop \
-          g++ make wget rsync \
+              g++ make wget rsync \
               build-base libpng-dev freetype-dev libexecinfo-dev openblas-dev libgomp lapack-dev \
-          libgcc libquadmath musl  \
-          libgfortran \
-         lapack-dev ;
+              libgcc libquadmath musl  \
+              libgfortran \
+              lapack-dev ;
       sudo  pip install --no-cache-dir --upgrade pip ;
       sudo  pip install numpy==1.17.3 ;
       sudo  pip install scipy==1.3.1 ;
