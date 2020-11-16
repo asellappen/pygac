@@ -14,6 +14,11 @@ install:
   - pip install coveralls
 # command to run tests, e.g. python setup.py test
 env: PYGAC_CONFIG_FILE=etc/pygac.cfg.template
+
+jobs:
+  exclude:
+    -arch : ppc64le
+     python :  "2.7_with_system_site_packages"
 script: coverage run --source=pygac setup.py test
 before_install:
   - sudo apt-get install -qq python-numpy python-h5py python-scipy libhdf5-serial-dev
