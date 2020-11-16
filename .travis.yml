@@ -17,7 +17,7 @@ env: PYGAC_CONFIG_FILE=etc/pygac.cfg.template
 
 jobs:
   exclude:
-    -arch : ppc64le
+   - arch : ppc64le
      python :  
        - "2.7_with_system_site_packages"
 script: coverage run --source=pygac setup.py test
