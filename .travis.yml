@@ -31,6 +31,8 @@ before_install:
       pip install scipy ;
       sudo apt-getinstall del .builddeps;
       sudo rm -rf /root/.cache;
+      pip uninstall h5py;
+      pip install --no-cache-dir h5py;
   else    
       sudo apt-get install -qq python-numpy python-h5py python-scipy libhdf5-serial-dev;
       echo "here else ppc";
