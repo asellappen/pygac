@@ -21,6 +21,7 @@ jobs:
      python :  
        - "2.7_with_system_site_packages"
        - "3.7"
+       - "3.9"
 script: coverage run --source=pygac setup.py test
 before_install:
 - if [[ "$TRAVIS_CPU_ARCH" == "ppc64le" ]]; then 
