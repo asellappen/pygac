@@ -25,8 +25,12 @@ jobs:
 script: coverage run --source=pygac setup.py test
 before_install:
 - if [[ "$TRAVIS_CPU_ARCH" == "ppc64le" ]]; then 
-      sudo apt-get install -qq python-numpy python-h5py python-scipy libhdf5-serial-dev;
       echo "here ppc";
+      sudo apt-get install --no-cache add lapack libstdc++ ;
+      sudo apt-get install --no-cache add --virtual .builddeps g++ gcc gfortran musl-dev lapack-dev ;
+      pip install scipy ;
+      sudo apt-getinstall del .builddeps;
+      sudo rm -rf /root/.cache;
   else    
       sudo apt-get install -qq python-numpy python-h5py python-scipy libhdf5-serial-dev;
       echo "here else ppc";
