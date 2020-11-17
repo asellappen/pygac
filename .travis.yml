@@ -26,8 +26,10 @@ script: coverage run --source=pygac setup.py test
 before_install:
 - if [[ "$TRAVIS_CPU_ARCH" == "ppc64le" ]]; then 
       sudo apt-get install -qq python-numpy python-h5py python-scipy libhdf5-serial-dev;
+      echo "here ppc";
   else    
       sudo apt-get install -qq python-numpy python-h5py python-scipy libhdf5-serial-dev;
+      echo "here else ppc";
   fi
 after_success: coveralls
 deploy:
