@@ -6,7 +6,7 @@ python:
   - "2.7_with_system_site_packages"
   - "3.7"
   - "3.8"
-  - "3.9"
+  
 # command to install dependencies, e.g.
 install:
   - pip install -r requirements.txt
