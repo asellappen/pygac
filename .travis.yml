@@ -26,8 +26,10 @@ script: coverage run --source=pygac setup.py test
 before_install:
 - if [[ "$TRAVIS_CPU_ARCH" == "ppc64le" ]]; then 
       echo "here ppc";
-      sudo apt-get install --no-cache add lapack libstdc++ ;
-      sudo apt-get install --no-cache add --virtual .builddeps g++ gcc gfortran musl-dev lapack-dev ;
+      sudo apt-get install lapack ;
+      sudo apt-get install  libstdc++ ;
+      sudo apt-get install  .builddeps
+      sudo apt-get install g++ gcc gfortran musl-dev lapack-dev ;
       pip install scipy ;
       sudo apt-getinstall del .builddeps;
       sudo rm -rf /root/.cache;
