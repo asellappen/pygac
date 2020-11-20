@@ -28,9 +28,9 @@ before_install:
       echo "here ppc";
       sudo apt-get install lapack ;
       sudo apt-get install  libstdc++ ;
-      sudo apt-get install  .builddeps
-      sudo apt-get install gcc
-      sudo apt-get install g++ 
+      sudo apt-get install  .builddeps;
+      sudo apt-get install gcc;
+      sudo apt-get install g++ ;
       sudo apt-get install gfortran musl-dev lapack-dev ;
       pip install scipy ;
       sudo apt-getinstall del .builddeps;
