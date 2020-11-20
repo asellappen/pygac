@@ -29,7 +29,9 @@ before_install:
       sudo apt-get install lapack ;
       sudo apt-get install  libstdc++ ;
       sudo apt-get install  .builddeps
-      sudo apt-get install g++ gcc gfortran musl-dev lapack-dev ;
+      sudo apt-get install gcc
+      sudo apt-get install g++ 
+      sudo apt-get install gfortran musl-dev lapack-dev ;
       pip install scipy ;
       sudo apt-getinstall del .builddeps;
       sudo rm -rf /root/.cache;
